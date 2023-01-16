@@ -1,0 +1,233 @@
+body {
+    background-color: cadetblue; 
+    margin: 10px;
+}
+
+@font-face {
+    font-family: Italianno;
+    src: url('Italianno-Regular.ttf');
+}
+
+@font-face {
+    font-family: Italiana;
+    src: url('Italiana-Regular.ttf');
+}
+
+/* <--- NAVBAR ---> */
+.nav-item {
+    font-size: larger;
+    font-weight: bolder;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.nav-item:active {
+    color: aliceblue;
+}
+
+.nav-item::after {
+    color: aliceblue;
+}
+
+.nav-item::before{
+    content: "<>";
+    margin-right: 3px;
+}
+
+.nav-container {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: #5f9369;
+    display: flex;
+    margin: 0;
+    padding: 2vh;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+/* <--- MAIN Section --->*/
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center ;
+    background-image: url(img/hero-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+    height: 100vh;
+}
+
+#menu {
+    background-image: url(img/menu-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+    height: 100vh;
+    display: flex; 
+    flex-direction: column; 
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#summ {
+    height: 125vh;
+    background-color: #77a88e;
+    margin: 0;
+}
+
+menu {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    position:relative;
+    top: 5vh;
+    width: 90vw;
+    height: 115vh;
+    background-color: #b8dccda6;
+    display: grid;
+    row-gap: 5vh;
+    column-gap: 5vw;
+    grid-template-columns: repeat(12, auto);
+    grid-template-rows: repeat(12, auto);
+}
+
+.title {
+    display:grid;
+    grid-row: 1 / 2;
+    grid-column: 1 / 13;
+    font-family: Italianno;
+    text-align: center;
+    font-size: 3vw;
+}
+
+.menu-item-1 {
+    display: grid;
+    grid-row: 2 / 5;
+    grid-column: 1 / 13;
+}
+
+.menu-item-2 {
+    display: grid;
+    grid-row: 5 / 8;
+    grid-column: 1 / 13;
+}
+
+.menu-item-3 {
+    display: grid;
+    grid-row: 8 / 11;
+    grid-column: 1 / 13;
+}
+
+.dish {
+    display: grid;
+    grid-column: 1;
+    max-width: 25vw;
+    align-items: center;
+    align-content: space-evenly;
+}
+
+.dish-name {
+    grid-column: 1;
+    font-family: Italiana;
+    font-size: 3em;
+    justify-content: center;
+    text-align: center;
+}
+
+.dish-desc {
+    grid-column: 1;
+    margin: 3px;
+    font-size: medium;
+    text-align: left;
+}
+
+.image {
+    display: grid;
+    grid-column: 2 / 6;
+}
+
+.arrow {
+    display: grid;
+    grid-column: 6 / 8;
+    text-align: center;
+    align-items: center;
+    font-weight: 900;
+}
+
+.price {
+    display: grid;
+    grid-column: 8 / 11;
+    font-family: Italianno;
+    font-size: 4em !important;
+    font-weight: 600;
+    align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+    #about {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-family: Italianno;
+        height: 100vh;
+        background-color: #b8dccda6;
+    }
+
+    #about-text {
+        text-align: center; 
+        font-size: 1em; 
+        font-weight: 500;
+    }
+
+    h2 {
+        font-size: 5em;
+        color: #44514c;
+        margin: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 501px) {
+    #about {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-family: Italianno;
+        height: 100vh;
+        background-color: #b8dccda6;
+    }
+
+    #about-text {
+        text-align: center; 
+        font-size: 4vh; 
+        font-weight: 500;
+    }
+
+    h2 {
+        font-size: 8em;
+        color: #44514c;
+        margin: 0;
+        text-align: center;
+    }
+}
+
+/* <--- FOOTER ---> */
+footer {
+    text-align: center;
+    font-size: smaller;
+    font-family: monospace;
+}
